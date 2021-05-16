@@ -21,6 +21,17 @@ spring:
         connection-timeout: 30000
         connection-test-query: SELECT 1
 
+    redis:
+      host: 47.101.130.58
+      port: 6379
+      database: 0
+      timeout: 10000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: 10000ms
+          max-idle: 200
+          min-idle: 5
 mybatis-plus:
   mapper-localtions: classpath*:/mapper/*Mapper.xml
   type-aliases-packge: com.xxx.seckill.pojo

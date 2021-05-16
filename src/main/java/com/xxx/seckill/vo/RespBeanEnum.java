@@ -7,7 +7,8 @@ public enum RespBeanEnum implements CodeEnum {
     //登录模块5002xx
     SESSION_ERROR(500210,"session不存在或者已经失效"),
     LOGINVO_ERROR(500211,"用户名或者密码错误"),
-    MOBILE_ERROR(500212,"手机号码格式错误");
+    MOBILE_ERROR(500212,"手机号码格式错误"),
+    BIND_ERROR(500212, "参数校验异常");
 
     public Integer code;
     public String message;

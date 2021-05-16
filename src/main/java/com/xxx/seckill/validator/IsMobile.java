@@ -24,7 +24,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = {IsMobileValidator.class})    ////此处指定了注解的实现类为IsMobileValidator,真正的校验逻辑由该类实现
 
 public @interface IsMobile {
-    boolean required() default true;
+    boolean required() default true;            //默认是必填
 
     String message() default "手机号码格式错误";
 

@@ -12,16 +12,16 @@ import javax.validation.ConstraintValidatorContext;
 //需要重写ConstraintValidator接口中的两个方法
 public class IsMobileValidator implements ConstraintValidator<IsMobile,String> {
 
-    private boolean require = false;
+    private boolean required = false;
 
     @Override
     public void initialize(IsMobile constraintAnnotation) {     //做一些初始化操作
-
+        required = constraintAnnotation.required();
     }
 
     @Override
     public boolean isValid(String s, ConstraintValidatorContext context) {   //终需要的校验方法
-        if(require){                                    //如果是必须字段
+        if(required){                                    //如果是必须字段
             return ValidatorUtil.isMobile(s);
         }else{
             if(StringUtils.isBlank(s)){

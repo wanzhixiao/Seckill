@@ -33,7 +33,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     }
 
     /**
-     * 更具cookie获取用户
+     * 根据cookie获取用户
      * @param methodParameter
      * @param modelAndViewContainer
      * @param nativeWebRequest

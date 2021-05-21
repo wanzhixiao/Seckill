@@ -14,7 +14,7 @@ import java.util.List;
  * MVC配置类
  * 作用域所有的Controller方法
  */
-@Configuration
+@Configuration      //行的功能是代替spring的配置文件  ,自动注入功能
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
     @Autowired
